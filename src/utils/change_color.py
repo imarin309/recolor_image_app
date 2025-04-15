@@ -5,12 +5,6 @@ NEW_COLOR = [127, 255, 212]  # 青色（BGR形式）
 
 
 def change_color(x: int, y: int, image):
-    print(f"クリックした座標: ({x}, {y})")
-
-    # クリックされたピクセルの色を取得
-    seed_color = image[y, x].tolist()
-    print(f"クリックしたピクセルのBGR値: {seed_color}")
-
     # フラッドフィル（領域を特定）
     mask = np.zeros(
         (image.shape[0] + 2, image.shape[1] + 2), np.uint8
