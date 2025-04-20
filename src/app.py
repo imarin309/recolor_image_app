@@ -32,12 +32,6 @@ if __name__ == "__main__":
         key="canvas",
     )
 
-
-
-aaa
-
-
-
     # 座標が取得できたら塗り替え処理
     if canvas_result.json_data is not None:
         for obj in canvas_result.json_data["objects"]:
