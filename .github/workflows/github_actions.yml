@@ -25,4 +25,6 @@ jobs:
         run: poetry install --no-interaction
 
       - name: Run lint (ruff)
-        run: poetry run ruff check .
+        run:
+          poetry run ruff check .
+          poetry run ruff format . --check --diff
