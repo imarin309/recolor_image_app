@@ -2,7 +2,6 @@ name: Run lint
 
 on:
   push:
-  pull_request:
 
 jobs:
   lint:
