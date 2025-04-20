@@ -1,8 +1,8 @@
 import streamlit as st
 import cv2
 from PIL import Image
-from streamlit_drawable_canvas import st_canvas
 from utils.change_color import change_color
+from streamlit_drawable_canvas import st_canvas
 
 IMAGE_PATH_SUGUMI = "test_image/sugumi.jpeg"
 
@@ -31,6 +31,11 @@ if __name__ == "__main__":
         drawing_mode="point",  # 点でクリックを受け取る
         key="canvas",
     )
+
+
+
+aaa
+
 
     # 座標が取得できたら塗り替え処理
     if canvas_result.json_data is not None:
