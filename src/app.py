@@ -30,11 +30,11 @@ if __name__ == "__main__":
     )
 
     if canvas_result.json_data is not None:
-        new_objects = canvas_result.json_data["objects"]
+        objects = canvas_result.json_data["objects"]
         old_count = len(st.session_state.points)
         if len(canvas_result.json_data["objects"]) > old_count:
-            obj = new_objects[-1]
-            x, y = int(obj["left"]), int(obj["top"])
+            new_object = objects[-1]
+            x, y = int(new_object["left"]), int(new_object["top"])
             st.session_state.points.append((x, y, new_color))
             st.session_state.img_rgb = change_color(
                 x, y, st.session_state.img_rgb, new_color
