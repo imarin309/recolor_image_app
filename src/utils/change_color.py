@@ -13,9 +13,7 @@ def change_color(x: int, y: int, image, new_color: str = NEW_COLOR_DEFAULT):
     )  # マスク画像 (周囲+2)
     flood_flags = 4 | cv2.FLOODFILL_MASK_ONLY | (255 << 8)
     tolerance = (7, 7, 7)  # 色の許容範囲 (B, G, R)
-    _, _, _, rect = cv2.floodFill(
-        image, mask, (x, y), None, tolerance, tolerance, flood_flags
-    )
+    cv2.floodFill(image, mask, (x, y), None, tolerance, tolerance, flood_flags)  # type: ignore
 
     # エッジを検出
     gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
