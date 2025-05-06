@@ -31,5 +31,4 @@ def change_color(x: int, y: int, image, new_color: str = NEW_COLOR_DEFAULT):
     new_color_rgb = ImageColor.getcolor(new_color, "RGB")
     result_image[combined_mask] = new_color_rgb
 
-    # 画像を更新して再描画
     return result_image
